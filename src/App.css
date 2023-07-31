@@ -276,10 +276,10 @@
 
 
  /************ Banner Css ************/
- /* 
+
  .banner {
    margin-top: 0;
-   padding: 260px 0 100px 0;
+   padding: 160px 0 100px 0;
    background-image: url('assets/images/banner-bg.jpg');
    background-position: top center;
    background-size: cover;
@@ -290,11 +290,14 @@
    font-weight: 700;
    letter-spacing: 0.8px;
    padding: 8px 10px;
-   background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+   background: linear-gradient(90.21deg, rgba(65, 152, 170, 0.5) -5.91%, rgba(25, 16, 67, 0.5) 111.58%);
    border: 1px solid rgba(255, 255, 255, 0.5);
    font-size: 20px;
    margin-bottom: 16px;
    display: inline-block;
+   color: #B8B8B8;
+   border-radius: 10px;
+
  }
 
  .banner h1 {
@@ -304,6 +307,8 @@
    line-height: 1;
    margin-bottom: 20px;
    display: block;
+   color: #B8B8B8;
+
  }
 
  .banner p {
@@ -355,7 +360,7 @@
 
  .txt-rotate>.wrap {
    border-right: 0.08em solid #666;
- } */
+ }
 
  /************ Skills Css ************/
  /* .skill {

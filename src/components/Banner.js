@@ -52,11 +52,11 @@ export const Banner = () => {
                     <Col xs={12} md={6} xl={7}>
                         <span className='tagline'>Bienvenido a mi página web</span>
                         <h1>{'Soy Guillem Figuerola Santiago'} <span className='wrap'>{text}</span></h1>
-                        <p>Hace un año decidí que quiero ser jugador profesional de pádel. Es un camino duro y de contínuo aprendizaje, pero estoy preparado para las derrotas y las victorias que vengan, sé que e harán crecer como persona y como jugador. Hacer lo que a uno le gusta en la vida es difícil, pero ¿por qué no intentarlo si ese es el camino a la felicidad de uno mismo?</p>
+                        <p>Hace un año decidí que quiero ser jugador profesional de pádel. Es un camino duro y de continuo aprendizaje, pero estoy preparado para las derrotas y las victorias que vengan, ya que me harán crecer como persona y como jugador. Dedicarse profesionalmente a lo que a uno le gusta es difícil, pero ¿por qué no intentarlo si ese es el camino a la felicidad?</p>
                         <button onClick={() => console.log('connect')}>Contacta conmigo si quieres ayudarme a conseguir mis objetivos <ArrowRightCircle size={25} />.</button>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
-                        <img src={headerImg} alt='Headder Img' />
+                        <img style={{ borderRadius: "10px" }} src={headerImg} alt='Headder Img' />
                     </Col>
                 </Row>
             </Container>
