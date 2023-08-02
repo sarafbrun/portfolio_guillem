@@ -362,13 +362,13 @@
    border-right: 0.08em solid #666;
  }
 
- /************ Skills Css ************/
- /* .skill {
+ /************ Perfil Profesional ************/
+ .perfil {
    padding: 0 0 50px 0;
    position: relative;
  }
 
- .skill-bx {
+ .perfil-bx {
    background: #151515;
    border-radius: 64px;
    text-align: center;
@@ -376,12 +376,12 @@
    margin-top: -60px;
  }
 
- .skill h2 {
+ .perfil h2 {
    font-size: 45px;
    font-weight: 700;
  }
 
- .skill p {
+ .perfil p {
    color: #B8B8B8;
    font-size: 18px;
    letter-spacing: 0.8px;
@@ -389,13 +389,13 @@
    margin: 14px 0 75px 0;
  }
 
- .skill-slider {
+ .perfil-slider {
    width: 80%;
    margin: 0 auto;
    position: relative;
  }
 
- .skill-slider .item img {
+ .perfil-slider .item img {
    width: 50%;
    margin: 0 auto 15px auto;
  }
@@ -406,10 +406,10 @@
    bottom: 0;
    width: 40%;
    z-index: -4;
- } */
+ }
 
  /************ Projects Css ************/
- /* .project {
+ .project {
    padding: 80px 0;
    position: relative;
    background-color: black;
@@ -551,10 +551,10 @@
    width: 35%;
    right: 0;
    z-index: -4;
- } */
+ }
 
  /************ Projects Css ************/
- /* .contact {
+ .contact {
    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
    padding: 60px 0 200px 0;
  }
@@ -638,16 +638,16 @@
 
  .contact form button:hover::before {
    width: 100%;
- } */
+ }
 
  /************ Footer Css ************/
- /*  .footer {
+ .footer {
    padding: 0 0 50px 0;
-   background-image: url('./assets/img/footer-bg.png');
+   background-image: url('./assets/images/footer-bg.png');
    background-position: center center;
    background-size: cover;
    background-repeat: no-repeat;
- } */
+ }
 
  /* .newsletter-bx {
    background: #FFFFFF;
@@ -715,6 +715,7 @@
    letter-spacing: 0.5px;
    border-radius: 18px;
  }
+ */
 
  .footer img {
    width: 26%;
@@ -726,4 +727,4 @@
    color: #B8B8B8;
    letter-spacing: 0.5px;
    margin-top: 20px;
- } */
+ }

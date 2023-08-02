@@ -1,4 +1,3 @@
-import logo from '../assets/images/logo.svg';
 import { useState, useEffect } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 
