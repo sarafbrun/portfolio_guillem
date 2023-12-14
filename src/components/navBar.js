@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 
@@ -8,7 +7,7 @@ import navIcon3 from '../assets/images/nav-icon3.svg';
 
 
 export const NavBar = () => {
-    const [activeLink, setActiveLink] = useState('home');
+    const [activeLink, setActiveLink] = useState('inicio');
     //desplazamiento del usuario en la web
     const [scrolled, seScrolled] = useState(false);
 
@@ -30,32 +29,37 @@ export const NavBar = () => {
     }
 
     return (
-        <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
+        <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
             <Container>
-                <Navbar.Brand href="#home">
-                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav">
                     <span className="navbar-toggler-icon"></span>
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
-                        <Nav.Link href="#perfil" className={activeLink === 'perfil' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('perfil')}>Perfil profesional</Nav.Link>
-                        <Nav.Link href="#temporada" className={activeLink === 'temporada' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('temporada')}>Temporada 2023</Nav.Link>
+                        <Nav.Link href="#inicio" className={activeLink === 'banner' ? 'active navbar-link' : 'navbar-link'} onClick={() =>
+                            window.scrollTo({
+                                top: 0,
+                                behavior: 'smooth'
+                            })}>Inicio</Nav.Link>
+                        <Nav.Link href="#perfil" className={activeLink === 'perfil' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('perfilProfesional')}>Perfil profesional</Nav.Link>
+                        <Nav.Link href="#resultados" className={activeLink === 'resultados' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('resultados')}>Mejores Resultados</Nav.Link>
                         <Nav.Link href="#patrocinio" className={activeLink === 'patrocinio' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('patrocinio')}>Patrocinio</Nav.Link>
 
                     </Nav>
                     <span className="navbar-text">
                         <div className="social-icon">
-                            <a href="https://www.linkedin.com/in/guillem-figuerola-santiago-60086a230/"><img src={navIcon1} /></a>
-                            <a href="https://www.facebook.com/guillem.figuerolasantiago"><img src={navIcon2} /></a>
-                            <a href="https://www.instagram.com/guillemfiguerola98/"><img src={navIcon3} /></a>
+                            <a target='_blank' href="https://www.linkedin.com/in/guillem-figuerola-santiago-60086a230/"><img src={navIcon1} /></a>
+                            <a target='_blank' href="https://www.facebook.com/guillem.figuerolasantiago"><img src={navIcon2} /></a>
+                            <a target='_blank' href="https://www.instagram.com/guillemfiguerola98/"><img src={navIcon3} /></a>
                         </div>
                         <button className="vvdon" onClick={() => console.log('connect')}><span>Contáctame</span></button>
                     </span>
-
                 </Navbar.Collapse>
             </Container>
         </Navbar>
     )
 }
+
+
+
+/*  */
