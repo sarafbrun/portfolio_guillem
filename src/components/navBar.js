@@ -52,7 +52,11 @@ export const NavBar = () => {
                             <a target='_blank' href="https://www.facebook.com/guillem.figuerolasantiago"><img src={navIcon2} /></a>
                             <a target='_blank' href="https://www.instagram.com/guillemfiguerola98/"><img src={navIcon3} /></a>
                         </div>
-                        <button className="vvdon" onClick={() => console.log('connect')}><span>Contáctame</span></button>
+                        <Nav.Link href="#contact">
+                            <button className="vvdon" >
+                                <span >Contáctame</span>
+                            </button>
+                        </Nav.Link>
                     </span>
                 </Navbar.Collapse>
             </Container>
