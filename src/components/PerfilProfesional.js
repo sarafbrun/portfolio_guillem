@@ -1,12 +1,12 @@
 import Carousel from 'react-multi-carousel';
-import { Container, Col, Row } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
+import { FaLocationDot } from 'react-icons/fa6';
 import 'react-multi-carousel/lib/styles.css';
-import meter1 from "../assets/images/pegando.jpeg";
-import meter2 from "../assets/images/black.jpg";
-import meter3 from "../assets/images/fcp.jpg";
-import meter4 from "../assets/images/chocandoMano.jpg";
-import meter5 from "../assets/images/saludando.jpg";
-import colorSharp from "../assets/images/color-sharp.png";
+import foto2 from "../assets/images/black.jpg";
+import foto3 from "../assets/images/fcp.jpg";
+import foto4 from "../assets/images/chocandoMano.jpg";
+import foto5 from "../assets/images/rojo.jpg";
+
 
 
 export const PerfilProfesional = () => {
@@ -26,35 +26,38 @@ export const PerfilProfesional = () => {
     };
 
     return (
-        <section className="perfil" id="perfil">
-            <Container>
+        <div className='background-image-left'>
+            <section className="perfil" id="perfil">
+
                 <Row>
                     <Col>
                         <div className="perfil-bx">
                             <h2>Perfil profesional</h2>
-                            <p><a href="https://www.flaticon.es/iconos-gratis/localizacion" title="localización iconos"></a>Valls Tarragona<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
+
+                            <p><FaLocationDot color='white' /> Valls, Tarragona. <br></br>Actualmente 250 del ránking Fip y 11 del ránquing autonómico de Cataluña. </p>
                             <Carousel responsive={responsive} infinite={true} className="perfil-slider">
                                 <div className="item">
-                                    <img src={meter4} alt="Image" />
+                                    <img src={foto4} alt="Image4" />
                                 </div>
                                 <div className="item">
-                                    <img src={meter2} alt="Image" />
+                                    <img src={foto2} alt="Image2" />
                                 </div>
                                 <div className="item">
-                                    <img src={meter3} alt="Image" />
+                                    <img src={foto3} alt="Image3" />
                                 </div>
                                 <div className="item">
-                                    <img src={meter5} alt="Image" />
+                                    <img src={foto5} alt="Image5" />
                                 </div>
-                                <div className="item">
-                                    <img src={meter1} alt="Image" />
-                                </div>
+
                             </Carousel>
                         </div>
                     </Col>
                 </Row>
-            </Container>
-            <img className="background-image-left" src={colorSharp} alt="Image" />
-        </section>
+
+
+
+
+            </section >
+        </div>
     )
 }

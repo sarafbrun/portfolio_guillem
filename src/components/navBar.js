@@ -36,9 +36,13 @@ export const NavBar = () => {
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link href="#inicio" className={activeLink === 'inicio' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('inicio')}>Inicio</Nav.Link>
-                        <Nav.Link href="#perfil" className={activeLink === 'perfil' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('perfil')}>Perfil profesional</Nav.Link>
-                        <Nav.Link href="#temporada" className={activeLink === 'temporada' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('temporada')}>Temporada 2023</Nav.Link>
+                        <Nav.Link href="#inicio" className={activeLink === 'banner' ? 'active navbar-link' : 'navbar-link'} onClick={() =>
+                            window.scrollTo({
+                                top: 0,
+                                behavior: 'smooth'
+                            })}>Inicio</Nav.Link>
+                        <Nav.Link href="#perfil" className={activeLink === 'perfil' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('perfilProfesional')}>Perfil profesional</Nav.Link>
+                        <Nav.Link href="#resultados" className={activeLink === 'resultados' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('resultados')}>Mejores Resultados</Nav.Link>
                         <Nav.Link href="#patrocinio" className={activeLink === 'patrocinio' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('patrocinio')}>Patrocinio</Nav.Link>
 
                     </Nav>

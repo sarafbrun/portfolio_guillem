@@ -1,12 +1,15 @@
 import { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { ArrowRightCircle } from 'react-bootstrap-icons';
-import headerImg from "../assets/images/jugando.jpeg"
+import headerImg from "../assets/images/jugando.jpeg";
+import 'animate.css';
+import TrackVisibility from 'react-on-screen';
+import { isVisible } from '@testing-library/user-event/dist/utils';
 
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = ["jugador profesional de pádel"];
+    const toRotate = ["profesional de pádel"];
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
     const [index, setIndex] = useState(1);
@@ -50,10 +53,15 @@ export const Banner = () => {
             <Container>
                 <Row className='align-items-center'>
                     <Col xs={12} md={6} xl={7}>
-                        <span className='tagline'>Bienvenido a mi página web</span>
-                        <h1>{'Soy Guillem Figuerola Santiago'} <span className='wrap'>{text}</span></h1>
-                        <p>Hace un año decidí que quiero ser jugador profesional de pádel. Es un camino duro y de continuo aprendizaje, pero estoy preparado para las derrotas y las victorias que vengan, ya que me harán crecer como persona y como jugador. Dedicarse profesionalmente a lo que a uno le gusta es difícil, pero ¿por qué no intentarlo si ese es el camino a la felicidad?</p>
-                        <button onClick={() => console.log('connect')}>Contacta conmigo si quieres ayudarme a conseguir mis objetivos <ArrowRightCircle size={25} />.</button>
+                        <TrackVisibility>
+                            {({ isVisible }) =>
+                                <div className={isVisible ? "animated__animated animate__fadeIn" : ""}>
+                                    <span className='tagline'>Bienvenido a mi página web</span>
+                                    <h1>{'Guillem Figuerola jugador'} <span className='wrap'>{text}</span></h1>
+                                    <p>Hace un año decidí que quiero dedicarme a este deporte de forma profesional. Es un camino duro y de continuo aprendizaje, pero estoy preparado para las derrotas y las victorias que vengan, ya que me harán crecer como persona y como jugador. Dedicarse profesionalmente a lo que a uno le gusta es difícil, pero ¿por qué no intentarlo si ese es el camino a la felicidad?</p>
+                                    <button className='contactame' onClick={() => console.log('connect')}>Contacta conmigo si quieres ayudarme a conseguir mis objetivos <ArrowRightCircle size={25} /></button>
+                                </div>}
+                        </TrackVisibility>
                     </Col>
                     <Col xs={12} md={6} xl={5}>
                         <img style={{ borderRadius: "10px" }} src={headerImg} alt='Headder Img' />
