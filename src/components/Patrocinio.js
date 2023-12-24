@@ -13,7 +13,7 @@ export const Patrocinio = () => {
                 <Container>
                     <div className='patrocinio-bx'>
                         <h2>Patrocinio</h2>
-                        <p className='beneficios'>Beneficios del patrocinador: Clínics, exhibiciones o eventos de empresa, publicidad en todos los torneos tanto a nivel nacional como internacional, publicidad en redes sociales en actos como torneos, entrenamientos o clínics.</p>
+                        <p className='beneficios'>Beneficios del patrocinador: Clínics, exhibiciones o eventos de empresa, publicidad en todos los torneos tanto a nivel nacional como internacional, publicidad en redes sociales, al finalizar actos como torneos, entrenamientos o clínics.</p>
                         <div className='camisetas'>
                             <article className='camiseta'>
                                 <img src={imagen1} alt='imagen camiseta' />
@@ -31,7 +31,9 @@ export const Patrocinio = () => {
                             </article>
                         </div>
 
-                        <button className='contactar' onClick={() => console.log('connect')}>Si quieres más información no dudes en contactar conmigo <ArrowRightCircle size={25} /></button>
+                        <a href='#contact'>
+                            <button className='contactar' onClick={() => console.log('connect')}>Si quieres más información no dudes en contactar conmigo <ArrowRightCircle size={25} /></button>
+                        </a>
                     </div>
 
                 </Container>

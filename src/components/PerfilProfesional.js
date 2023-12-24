@@ -4,9 +4,10 @@ import { FaLocationDot } from 'react-icons/fa6';
 import 'react-multi-carousel/lib/styles.css';
 import foto2 from "../assets/images/black.jpg";
 import foto3 from "../assets/images/fcp.jpg";
-import foto4 from "../assets/images/chocandoMano.jpg";
+import foto4 from "../assets/images/vallparc2.jpg";
 import foto5 from "../assets/images/rojo.jpg";
-
+import foto6 from "../assets/images/vallparc3.jpg"
+import foto7 from "../assets/images/londres.jpg"
 
 
 export const PerfilProfesional = () => {
@@ -34,7 +35,7 @@ export const PerfilProfesional = () => {
                         <div className="perfil-bx">
                             <h2>Perfil profesional</h2>
 
-                            <p><FaLocationDot color='white' /> Valls, Tarragona. <br></br>Actualmente 250 del ránking Fip y 11 del ránquing autonómico de Cataluña. </p>
+                            <p><FaLocationDot color='white' /> Valls, Tarragona. <br></br>Actualmente 210 del ránking Fip y 8 del ránquing autonómico de Cataluña. </p>
                             <Carousel responsive={responsive} infinite={true} className="perfil-slider">
                                 <div className="item">
                                     <img src={foto4} alt="Image4" />
@@ -47,6 +48,12 @@ export const PerfilProfesional = () => {
                                 </div>
                                 <div className="item">
                                     <img src={foto5} alt="Image5" />
+                                </div>
+                                <div className="item">
+                                    <img src={foto6} alt="Image5" />
+                                </div>
+                                <div className="item">
+                                    <img src={foto7} alt="Image5" />
                                 </div>
 
                             </Carousel>

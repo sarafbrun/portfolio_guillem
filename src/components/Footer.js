@@ -11,9 +11,9 @@ export const Footer = () => {
 
                     <Col size={12} sm={6} className="text-center text-sm-end">
                         <div className="social-icon">
-                            <a href="#"><img src={navIcon1} alt="Icon" /></a>
-                            <a href="#"><img src={navIcon2} alt="Icon" /></a>
-                            <a href="#"><img src={navIcon3} alt="Icon" /></a>
+                            <a target='_blank' href="https://www.linkedin.com/in/guillem-figuerola-santiago-60086a230/"><img src={navIcon1} /></a>
+                            <a target='_blank' href="https://www.facebook.com/guillem.figuerolasantiago"><img src={navIcon2} /></a>
+                            <a target='_blank' href="https://www.instagram.com/guillemfiguerola98/"><img src={navIcon3} /></a>
                         </div>
                         <p>Copyright 2023. All Rights Reserved</p>
                     </Col>

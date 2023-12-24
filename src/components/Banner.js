@@ -9,43 +9,43 @@ import { isVisible } from '@testing-library/user-event/dist/utils';
 export const Banner = () => {
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
-    const toRotate = ["profesional de pádel"];
+    //const toRotate = ["profesional de pádel"];
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
     const [index, setIndex] = useState(1);
     const period = 2000;
 
-    useEffect(() => {
-        let ticker = setInterval(() => {
-            tick();
-        }, delta)
+    // useEffect(() => {
+    //     let ticker = setInterval(() => {
+    //         tick();
+    //     }, delta)
 
-        return () => { clearInterval(ticker) };
-    }, [text])
+    //     return () => { clearInterval(ticker) };
+    // }, [text])
 
-    const tick = () => {
-        let i = loopNum % toRotate.length;
-        let fullText = toRotate[i];
-        let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
+    // const tick = () => {
+    //     let i = loopNum % toRotate.length;
+    //     let fullText = toRotate[i];
+    //     let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
 
-        setText(updatedText);
+    //     setText(updatedText);
 
-        if (isDeleting) {
-            setDelta(prevDelta => prevDelta / 2)
-        }
+    //     if (isDeleting) {
+    //         setDelta(prevDelta => prevDelta / 2)
+    //     }
 
-        if (!isDeleting && updatedText === fullText) {
-            setIsDeleting(true);
-            setIndex(prevIndex => prevIndex - 1);
-            setDelta(period);
-        } else if (isDeleting && updatedText === '') {
-            setIsDeleting(false);
-            setLoopNum(loopNum + 1);
-            setDelta(500);
-        } else {
-            setIndex(prevIndex => prevIndex + 1);
-        }
-    }
+    //     if (!isDeleting && updatedText === fullText) {
+    //         setIsDeleting(true);
+    //         setIndex(prevIndex => prevIndex - 1);
+    //         setDelta(period);
+    //     } else if (isDeleting && updatedText === '') {
+    //         setIsDeleting(false);
+    //         setLoopNum(loopNum + 1);
+    //         setDelta(500);
+    //     } else {
+    //         setIndex(prevIndex => prevIndex + 1);
+    //     }
+    // }
 
 
     return (
@@ -57,9 +57,11 @@ export const Banner = () => {
                             {({ isVisible }) =>
                                 <div className={isVisible ? "animated__animated animate__fadeIn" : ""}>
                                     <span className='tagline'>Bienvenido a mi página web</span>
-                                    <h1>{'Guillem Figuerola jugador'} <span className='wrap'>{text}</span></h1>
-                                    <p>Hace un año decidí que quiero dedicarme a este deporte de forma profesional. Es un camino duro y de continuo aprendizaje, pero estoy preparado para las derrotas y las victorias que vengan, ya que me harán crecer como persona y como jugador. Dedicarse profesionalmente a lo que a uno le gusta es difícil, pero ¿por qué no intentarlo si ese es el camino a la felicidad?</p>
-                                    <button className='contactame' onClick={() => console.log('connect')}>Contacta conmigo si quieres ayudarme a conseguir mis objetivos <ArrowRightCircle size={25} /></button>
+                                    <h1>{'Guillem Figuerola jugador profesional de pádel'} <span className='wrap'>{text}</span></h1>
+                                    <p>Empieza una nueva temporada como jugador profesional. Es un camino duro y de continuo aprendizaje, pero estoy preparado para las derrotas y las victorias que vengan, ya que me harán crecer como persona y me harán mejor jugador. Dedicarse profesionalmente a lo que a uno le gusta es difícil, pero ¿por qué no intentarlo si ese es el camino a la felicidad?</p>
+                                    <a className='contactame' href='#contact'>
+                                        <button className='contactame'>Contacta conmigo si quieres participar en mi proyecto y ayudarme a conseguir mis objetivos <ArrowRightCircle size={25} /></button>
+                                    </a>
                                 </div>}
                         </TrackVisibility>
                     </Col>
